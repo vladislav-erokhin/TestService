@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package test.v1;
+
+service TestService {
+  rpc SumNumbers (SumNumbersRequest) returns (SumNumbersResponse);
+
+  rpc MultiplyNumbers (MultiplyNumbersRequest) returns (MultiplyNumbersResponse);
+}
+
+message SumNumbersRequest {
+	int32 x = 1;
+	int32 y = 2;
+}
+
+message SumNumbersResponse {
+	int32 result = 1;
+}
+
+message MultiplyNumbersRequest {
+	int32 x = 1;
+	int32 y = 2;
+}
+
+message MultiplyNumbersResponse {
+	int32 result = 1;
+}
